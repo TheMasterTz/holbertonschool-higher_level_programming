@@ -14,4 +14,4 @@ elif last < 6:
 else:
     str = 'and is 0'
 
-print('Last digit of {} is {} {}'.format(number, last, str))
+print('Last digit of {0} is {1} {}'.format(number, last, str))
