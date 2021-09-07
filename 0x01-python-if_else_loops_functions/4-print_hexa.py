@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 number = 0
 while number <= 98:
-    print('{} = 0x{:x}'.format(number, number))
+    print('{} = {}'.format(number, hex(number)))
     number += 1
