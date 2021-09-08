@@ -6,4 +6,4 @@ if __name__ == '__main__':
 
     for i in range(len(names)):
         if names[i][:2] != '__':
-            print(names[i])
+            print('{:s}'.format(names[i]))
