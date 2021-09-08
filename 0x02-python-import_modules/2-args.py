@@ -9,7 +9,7 @@ if __name__ == "__main__":
         for i in range(1, len_args + 1):
             print('{}: {}'.format(i, sys.argv[i]))
     elif len_args == 1:
-        print(len_args, "arguments:")
+        print(len_args, "argument:")
         for i in range(1, len_args + 1):
             print('{}: {}'.format(i, sys.argv[i]))
     elif len_args == 0:
