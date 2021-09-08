@@ -2,8 +2,8 @@
 import hidden_4
 
 if __name__ == '__main__':
-    names = dir(hidden_4)
+    def_names = dir(hidden_4)
 
-    for i in range(len(names)):
-        if names[i][:2] != '__':
-            print('{:s}'.format(names[i]))
+    for i in range(len(def_names)):
+        if def_names[i][:2] != '__':
+            print(def_names[i])
