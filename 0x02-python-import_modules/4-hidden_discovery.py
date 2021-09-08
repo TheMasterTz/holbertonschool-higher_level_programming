@@ -5,5 +5,5 @@ if __name__ == '__main__':
     names = dir(hidden_4)
 
     for i in range(len(names)):
-        if names[i][:2] != '__':
+        if names[i] != '__':
             print(names[i])
