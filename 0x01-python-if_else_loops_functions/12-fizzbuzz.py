@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def fizzbuzz():
     n = 1
     while n < 101
