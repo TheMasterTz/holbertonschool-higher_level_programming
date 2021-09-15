@@ -1,5 +1,4 @@
-""" Roman to Integer test file
-"""
+#!/usr/bin/python3
 def roman_to_int(roman_string):
     roman_number = [
         ['M', 1000], ['D', 500], ['C', 100], ['L', 50],
@@ -17,18 +16,3 @@ def roman_to_int(roman_string):
 
                 last = element[1]
     return num
-
-roman_number = "X"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "VII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "IX"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "LXXXVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "DCCVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
