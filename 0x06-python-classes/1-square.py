@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""Square class
+"""Square Class
 A Square Class
 """
+
+
 class Square:
     """__init__
     The __init__ method initializes the size value

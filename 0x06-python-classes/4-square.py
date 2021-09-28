@@ -2,6 +2,8 @@
 """Square Class
 A Square Class
 """
+
+
 class Square:
     """__init__
 
