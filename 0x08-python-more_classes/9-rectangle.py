@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Rectangle Class
 A Rectangle Class
 """
