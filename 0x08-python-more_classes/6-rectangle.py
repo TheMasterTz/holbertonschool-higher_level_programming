@@ -5,19 +5,20 @@ A Rectangle Class
 
 
 class Rectangle:
+    """Representation of a rectangle"""
+
     number_of_instances = 0
+
     """__init__
-
     The __init__ method initializes the size value of the Rectangle.
-
     Attributes:
         width (:obj:`int`, optional): The width of the Rectangle.
         height (:obj:`int`, optional): The height of the Rectangle.
-
     Raises:
         TypeError: If `size` type is not `int`.
         ValueError: If `size` is less than `0`.
     """
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
