@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """Square Class
 A Square Class
 """
@@ -109,8 +109,7 @@ class Square:
 
         for j in range(1, self.area() + 1):
             if j % self.__size == 1:
-                print('{: > {w}}'.format(
-                    '#', w=self.__position[0] + 1), end='')
+                print('{:>{w}}'.format('#', w=self.__position[0] + 1), end='')
             else:
                 print('#', end='')
 
