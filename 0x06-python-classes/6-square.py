@@ -16,6 +16,7 @@ class Square:
         TypeError: If `size` type is not `int`.
         ValueError: If `size` is less than `0`.
     """
+
     def __init__(self, size=0, position=(0, 0)):
 
         if type(size) is not int:
@@ -90,6 +91,7 @@ class Square:
     def check_values(self, position):
         if position[0] >= 0 and position[1] >= 0:
             return True
+        return False
 
     def area(self):
         """Returns the current square area
@@ -107,7 +109,8 @@ class Square:
 
         for j in range(1, self.area() + 1):
             if j % self.__size == 1:
-                print('{:>{w}}'.format('#', w=self.__position[0] + 1), end='')
+                print('{: > {w}}'.format(
+                    '#', w=self.__position[0] + 1), end='')
             else:
                 print('#', end='')
 
