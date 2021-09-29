@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 """Square Class
 A Square Class
 """
@@ -115,8 +115,3 @@ class Square:
 
             if j % self.__size == 0 and j > 0:
                 print()
-
-try:
-    my_square = Square(3, (1, ))
-except Exception as e:
-    print(e)
