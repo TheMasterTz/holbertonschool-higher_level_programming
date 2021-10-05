@@ -11,17 +11,3 @@ def print_square(size):
     string = ""
     string += '\n'.join('#' * size for j in range(size))
     print(string)
-
-print_square(4)
-print("")
-print_square(10)
-print("")
-print_square(0)
-print("")
-print_square(1)
-print("")
-try:
-    print_square(-1)
-except Exception as e:
-    print(e)
-print("")

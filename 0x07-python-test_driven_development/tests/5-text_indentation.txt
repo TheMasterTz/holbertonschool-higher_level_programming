@@ -1,0 +1,40 @@
+==================================
+The ``5-text_indentation`` module
+==================================
+
+Using ``5-text_indentation``
+----------------------------------
+
+Importing the function from the module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now running test:
+
+    >>> text_indentation("Hello. jhon")
+    Hello.
+    <BLANKLINE>
+    jhon
+
+    >>> text_indentation(23)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(["hi?", "hi.", "hi.."])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation("")
+
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(":.?.")
+    :
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
