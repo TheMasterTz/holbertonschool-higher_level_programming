@@ -1,4 +1,4 @@
- # 0-add_integer.py
+# 0-add_integer.py
 
 ===============================
 How to Use 0-add_integer.py
@@ -22,6 +22,9 @@ Now running test:
 	2
 
 	>>> add_integer(1, float('inf'))
+	89
+
+	>>> add_integer(float('NaN'), 0)
 	89
 
 	>>> add_integer('a', 1)
