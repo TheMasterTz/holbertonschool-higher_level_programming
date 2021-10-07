@@ -1,28 +1,21 @@
 #!/usr/bin/python3
 """
-Function that return that adition of intengers
+This is the "0-add_integer" module.
 
-Doctest check the tests
-
-Always return a integer value
+The 0-add_integer module supplies one function, add_integer(a, b).
 """
 
 
 def add_integer(a, b=98):
-    """Return adition of two numbers"""
-    if a != a:
-        a = 89
-    if b != b:
-        b = 89
-
-    if type(a) not in [int, float]:
+    """Return the addition of two numbers."""
+    if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
-
-    if type(b) not in [int, float]:
+    if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
 
-    res = a + b
-    if res == float('inf') or res == -float('inf'):
-        return 89
+    if type(a) is float:
+        a = int(a)
+    if type(b) is float:
+        b = int(b)
 
-    return int(a) + int(b)
+    return a + b
