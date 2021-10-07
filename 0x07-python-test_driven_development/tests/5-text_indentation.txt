@@ -16,8 +16,8 @@ Test case:
 
 - Checking normal use:
 
-    >>> text("HELLO SHANNEL")
-    HELLO SHANNEL
+    >>> text("HELLO")
+    HELLO
 
     >>> text("hello. hi?")
     hello.
