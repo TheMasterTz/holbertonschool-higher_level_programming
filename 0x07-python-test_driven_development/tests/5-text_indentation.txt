@@ -1,40 +1,60 @@
-==================================
-The ``5-text_indentation`` module
-==================================
+# doctest_text_indentation.py
 
-Using ``5-text_indentation``
-----------------------------------
+======================================
+File information 5-text_indentation.py
+======================================
 
-Importing the function from the module:
-    >>> text_indentation = __import__('5-text_indentation').text_indentation
+Function that prints a text with 2 new lines
+after each of these characters: ., ? and :
 
-Now running test:
+Test case:
+==========
 
-    >>> text_indentation("Hello. jhon")
-    Hello.
+- Importing the function from module:
+
+    >>> text = __import__("5-text_indentation").text_indentation
+
+- Checking normal use:
+
+    >>> text("HELLO SHANNEL")
+    HELLO SHANNEL
+
+    >>> text("hello. hi?")
+    hello.
     <BLANKLINE>
-    jhon
+    hi?
+    <BLANKLINE>
 
-    >>> text_indentation(23)
+- Checking if is int:
+
+    >>> text(2)
     Traceback (most recent call last):
+    ...
     TypeError: text must be a string
 
-    >>> text_indentation(["hi?", "hi.", "hi.."])
+- Checking if the function dont have arguments:
+
+    >>> text()
     Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+- Checking when is None:
+
+    >>> text(None)
+    Traceback (most recent call last):
+    ...
     TypeError: text must be a string
 
-    >>> text_indentation("")
+- Checking other test:
 
-    >>> text_indentation(True)
+    >>> text(float('inf'))
     Traceback (most recent call last):
+    ...
     TypeError: text must be a string
 
-    >>> text_indentation(":.?.")
-    :
-    <BLANKLINE>
-    .
-    <BLANKLINE>
-    ?
-    <BLANKLINE>
-    .
-    <BLANKLINE>
+    >>> text(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
