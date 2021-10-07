@@ -44,3 +44,11 @@ Now running test:
 	>>> add_integer("a", "b")
 	Traceback (most recent call last):
 	TypeError: a must be an integer
+
+	>>> add_integer([1], 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+	>>> add_integer((2,), [1])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
