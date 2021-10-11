@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-    Checks if the `obj` is an instance of `a_class` that inherited (directly or indirectly)
+    Checks if the `obj` is an instance of `a_class` that inherited
+    (directly or indirectly)
 
     Args:
         obj (any): The object to compare
