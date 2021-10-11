@@ -6,8 +6,8 @@
         obj (any): The object to compare
         a_class (any): The class to compare with the object
     Returns:
-    `True` if the object is an instance or inherit from the
-    specified class; otherwise `False`
+        `True` if the object is an instance or inherit from the
+        specified class; otherwise `False`
 """
 
 
