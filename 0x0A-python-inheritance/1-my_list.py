@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 """
-Contains the class MyList and list
+A module to prints a list in ascending order
 """
 
 
 class MyList(list):
+    """
+    A class to customize the list class
+    """
+
     def print_sorted(self):
         """
         Prints a list in ascending order
