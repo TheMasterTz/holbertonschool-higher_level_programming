@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the function "append_wrtie"
+Contains the function "append_write"
 """
 
 
