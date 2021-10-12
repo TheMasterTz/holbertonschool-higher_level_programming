@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Contains the class MyList and list
+"""
 class MyList(list):
     def print_sorted(self):
         """
