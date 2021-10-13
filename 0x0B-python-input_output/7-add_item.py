@@ -13,8 +13,6 @@ try:
     NewList = load_from_json_file("add_item.json")
 except FileNotFoundError:
     NewList = []
-
 for args in argv[1:]:
     NewList.append(args)
-
-save_to_json_file(NewList , "add_item.json")
+save_to_json_file(NewList, "add_item.json")
