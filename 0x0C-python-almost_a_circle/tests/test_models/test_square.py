@@ -63,11 +63,11 @@ class TestSquare(unittest.TestCase):
 
         s5 = Square(4, 2, 6, 89)
         self.assertEqual(s5.__str__(), "[Square] (89) 2/6 - 4")
-        s5.update(id = 10)
+        s5.update(id=10)
         self.assertEqual(s5.__str__(), "[Square] (10) 2/6 - 4")
-        s5.update(x = 3, y = 6)
+        s5.update(x=3, y=6)
         self.assertEqual(s5.__str__(), "[Square] (10) 3/6 - 4")
-        s5.update(size = 2)
+        s5.update(size=2)
         self.assertEqual(s5.__str__(), "[Square] (10) 3/6 - 2")
 
         s6 = Square(5, 4, 2, 10)
@@ -83,95 +83,75 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s7.__str__(), "[Square] (10) 4/2 - 5")
         self.assertEqual(s7 == s6, False)
 
-
-        #TypeError size
+        # TypeError size
         with self.assertRaises(TypeError) as error:
             Square("hi")
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
             Square({})
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
             Square([])
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
             Square((1, 2))
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
             Square(2.34)
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
             Square(True)
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(ValueError) as error:
             Square(-4)
         self.assertEqual("width must be > 0", str(error.exception))
 
-
-        #TypeError x
+        # TypeError x
         with self.assertRaises(TypeError) as error:
-            Square(11 , "hi")
+            Square(11, "hi")
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , {})
+            Square(11, {})
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , [])
+            Square(11, [])
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , (1, 2))
+            Square(11, (1, 2))
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , 3.45)
+            Square(11, 3.45)
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , False)
+            Square(11, False)
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(ValueError) as error:
-            Square(11 , -5)
+            Square(11, -5)
         self.assertEqual("x must be >= 0", str(error.exception))
 
-
-        #TypeError y
+        # TypeError y
         with self.assertRaises(TypeError) as error:
-            Square(11 , 3, "hi")
+            Square(11, 3, "hi")
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , 3, {})
+            Square(11, 3, {})
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , 3, [])
+            Square(11, 3, [])
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , 3, (1, 2))
+            Square(11, 3, (1, 2))
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , 3, 3.45)
+            Square(11, 3, 3.45)
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Square(11 , 3, False)
+            Square(11, 3, False)
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(ValueError) as error:
-            Square(11 , 3, -5)
+            Square(11, 3, -5)
         self.assertEqual("y must be >= 0", str(error.exception))
+
 
 if __name__ == "__main__":
     unittest.main()

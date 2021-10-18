@@ -10,6 +10,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestBase(unittest.TestCase):
     """ class TestBase"""
 
@@ -31,7 +32,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b4.id, 3)
         self.assertIsInstance(b4, Base)
 
-        b5 = Rectangle(12, 3, 5 ,7)
+        b5 = Rectangle(12, 3, 5, 7)
         Dict = b5.to_dictionary()
         Dict2 = {'x': 5, 'width': 12, 'id': 4, 'height': 3, 'y': 7}
         self.assertDictEqual(Dict, Dict2)

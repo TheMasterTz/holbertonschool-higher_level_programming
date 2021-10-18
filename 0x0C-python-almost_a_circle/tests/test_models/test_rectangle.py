@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 
 """
 Unittest for base([..])
@@ -8,9 +8,12 @@ import unittest
 from models.rectangle import Rectangle
 from models.base import Base
 
+
 class TestRectangle(unittest.TestCase):
     """Test Rectangle"""
+
     def test_rectangle(self):
+        """Test rectangles"""
         r1 = Rectangle(10, 2)
         self.assertEqual(r1.width, 10)
         self.assertEqual(r1.height, 2)
@@ -41,7 +44,7 @@ class TestRectangle(unittest.TestCase):
         r5 = Rectangle(2, 3, 1)
         self.assertEqual(r5.area(), 6)
 
-        # width, height, x=0, y=0, id=None)
+        # width, height, x = 0, y = 0, id = None)
         r6 = Rectangle(4, 5, 10, 7, 3)
         self.assertEqual(r6.__str__(), "[Rectangle] (3) 10/7 - 4/5")
         r6.update(89)
@@ -82,125 +85,98 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r11.__str__(), "[Rectangle] (14) 3/4 - 10/12")
         self.assertFalse(r11 == r10)
 
-
-        #TypeError width
+        # TypeError width
         with self.assertRaises(TypeError) as error:
-            Rectangle("hi" , 11)
+            Rectangle("hi", 11)
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle([] , 11)
+            Rectangle([], 11)
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle((10, ) , 11)
+            Rectangle((10, ), 11)
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle({} , 11)
+            Rectangle({}, 11)
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(7.34 , 11)
+            Rectangle(7.34, 11)
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(True , 11)
+            Rectangle(True, 11)
         self.assertEqual("width must be an integer", str(error.exception))
-
         with self.assertRaises(ValueError) as error:
             Rectangle(-4, 11)
         self.assertEqual("width must be > 0", str(error.exception))
 
-
-        #TypeError height
+        # TypeError height
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , "11")
+            Rectangle(11, "11")
         self.assertEqual("height must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , [])
+            Rectangle(11, [])
         self.assertEqual("height must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , {})
+            Rectangle(11, {})
         self.assertEqual("height must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , (1, 2))
+            Rectangle(11, (1, 2))
         self.assertEqual("height must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , True)
+            Rectangle(11, True)
         self.assertEqual("height must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 2.23)
+            Rectangle(11, 2.23)
         self.assertEqual("height must be an integer", str(error.exception))
-
         with self.assertRaises(ValueError) as error:
             Rectangle(11, -3)
         self.assertEqual("height must be > 0", str(error.exception))
 
-
-        #TypeError x
+        # TypeError x
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , "hi")
+            Rectangle(11, 12, "hi")
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , {})
+            Rectangle(11, 12, {})
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , [])
+            Rectangle(11, 12, [])
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , (1, 2))
+            Rectangle(11, 12, (1, 2))
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , False)
+            Rectangle(11, 12, False)
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , 4.22)
+            Rectangle(11, 12, 4.22)
         self.assertEqual("x must be an integer", str(error.exception))
-
         with self.assertRaises(ValueError) as error:
-            Rectangle(11 , 12 , -2)
+            Rectangle(11, 12, -2)
         self.assertEqual("x must be >= 0", str(error.exception))
 
-
-        #TypeError y
+        # TypeError y
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , 3, "hi")
+            Rectangle(11, 12, 3, "hi")
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , 3, [])
+            Rectangle(11, 12, 3, [])
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , 3, {})
+            Rectangle(11, 12, 3, {})
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , 3, (2, 5))
+            Rectangle(11, 12, 3, (2, 5))
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , 3, False)
+            Rectangle(11, 12, 3, False)
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(TypeError) as error:
-            Rectangle(11 , 12 , 3, 5.67)
+            Rectangle(11, 12, 3, 5.67)
         self.assertEqual("y must be an integer", str(error.exception))
-
         with self.assertRaises(ValueError) as error:
-            Rectangle(11 , 12 , 3, -2)
+            Rectangle(11, 12, 3, -2)
         self.assertEqual("y must be >= 0", str(error.exception))
+
 
 if __name__ == '__main__':
     unittest.main()
