@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Contains the "Rectangle" class
 """
@@ -76,30 +77,33 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """print a display of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += ('\n' * self.__y) + '\n'.join(
                 (' ' * self.__x) + ('#' * self.__width)
-                        for j in range(self.__height))
+                for j in range(self.__height))
         print(string)
 
     def __str__(self):
+        """informal string representation of the rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
         if len(args) != 0:
             for i, arg in enumerate(args):
                 if i == 0:
                     self.id = arg
                 elif i == 1:
-                    self.__width = arg
+                    self.width = arg
                 elif i == 2:
-                    self.__height = arg
+                    self.height = arg
                 elif i == 3:
-                    self.__x = arg
+                    self.x = arg
                 elif i == 4:
-                    self.__y = arg
+                    self.y = arg
 
         else:
             if "id" in kwargs:
@@ -114,6 +118,7 @@ class Rectangle(Base):
                 self.__y = kwargs["y"]
 
     def to_dictionary(self):
+        """dictionary representation of a Rectangle"""
         dictionary = {}
 
         dictionary["x"] = self.x
@@ -123,4 +128,3 @@ class Rectangle(Base):
         dictionary["width"] = self.width
 
         return dictionary
-
