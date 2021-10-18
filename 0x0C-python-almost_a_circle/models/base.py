@@ -24,6 +24,9 @@ class Base:
         """returns the JSON string representation of list_dictionaries"""
         if list_dictionaries is None:
             list_dictionaries = []
+        if type(list_dictionaries) is not list:
+            raise TypeError("argument must be a list of dictionaries")
+
         return json.dumps(list_dictionaries)
 
     @classmethod
