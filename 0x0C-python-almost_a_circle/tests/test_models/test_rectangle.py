@@ -110,7 +110,7 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(ValueError) as error:
             Rectangle(-4, 11)
-        self.assertEqual("width must be >= 0", str(error.exception))
+        self.assertEqual("width must be > 0", str(error.exception))
 
 
         #TypeError height
@@ -140,7 +140,7 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(ValueError) as error:
             Rectangle(11, -3)
-        self.assertEqual("height must be >= 0", str(error.exception))
+        self.assertEqual("height must be > 0", str(error.exception))
 
 
         #TypeError x

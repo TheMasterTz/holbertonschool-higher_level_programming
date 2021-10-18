@@ -39,6 +39,11 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string([]), "[]")
         self.assertEqual(Base.to_json_string(None), "[]")
 
+        with self.assertRaises(TypeError) as error:
+            Base.to_json_string(5)
+        self.assertEqual("argument must be a list of dictionaries",
+                         str(error.exception))
+
         Rectangle.save_to_file([])
         with open("Rectangle.json", 'r') as f:
             self.assertEqual(f.read(), "[]")

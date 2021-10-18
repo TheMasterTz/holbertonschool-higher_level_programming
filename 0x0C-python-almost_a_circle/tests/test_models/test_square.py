@@ -111,7 +111,7 @@ class TestSquare(unittest.TestCase):
 
         with self.assertRaises(ValueError) as error:
             Square(-4)
-        self.assertEqual("width must be >= 0", str(error.exception))
+        self.assertEqual("width must be > 0", str(error.exception))
 
 
         #TypeError x
