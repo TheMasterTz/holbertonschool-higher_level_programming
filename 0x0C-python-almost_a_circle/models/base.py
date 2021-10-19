@@ -4,6 +4,7 @@ This module contains the "Base" class
 """
 
 import json
+import csv
 from os import path
 
 
@@ -33,13 +34,14 @@ class Base:
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
         filename = cls.__name__ + ".json"
-        ListCart = []
+        List = []
+
         if list_objs is not None:
             for obj in list_objs:
-                ListCart.append(cls.to_dictionary(obj))
+                List.append(cls.to_dictionary(obj))
 
         with open(filename, 'w') as f:
-            f.write(cls.to_json_string(ListCart))
+            f.write(cls.to_json_string(List))
 
     @staticmethod
     def from_json_string(json_string):
@@ -74,3 +76,48 @@ class Base:
             for obj in objs:
                 dummy.append(cls.create(**obj))
             return dummy
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """def save_to_file_csv"""
+        filename = cls.__name__ + ".csv"
+
+        with open(filename, 'w') as filecsv:
+            write = csv.writer(filecsv)
+            if cls.__name__ is "Rectangle":
+                for obj in list_objs:
+                    write.writerow([obj.id, obj.width, obj.height,
+                                    obj.x, obj.y])
+            if cls.__name__ is "Square":
+                for obj in list_objs:
+                    write.writerow([obj.id, obj.size, obj.x, obj.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """def save_to_csv"""
+        filename = cls.__name__ + ".csv"
+        List = []
+
+        try:
+            with open(filename, 'r') as fcsv:
+                reader = csv.reader(fcsv)
+                for args in reader:
+                    if cls.__name__ is "Rectangle":
+                        dictionary = {
+                            "id": int(args[0]),
+                            "width": int(args[1]),
+                            "height": int(args[2]),
+                            "x": int(args[3]),
+                            "y": int(args[4])
+                        }
+                    if cls.__name__ is "Square":
+                        dictionary = {
+                            "id": int(args[0]),
+                            "size": int(args[1]),
+                            "x": int(args[2]),
+                            "y": int(args[3])
+                        }
+                    List.append(cls.create(**dictionary))
+        except:
+            pass
+        return List
