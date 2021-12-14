@@ -10,7 +10,7 @@ module.exports = class Square extends OldSquare {
     super.double();
   }
 
-  charPrint (char = 'X') {
-    super.print(char);
+  charPrint (c = 'X') {
+    super.print(c);
   }
 };
