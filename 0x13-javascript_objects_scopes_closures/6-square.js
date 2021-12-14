@@ -6,9 +6,11 @@ module.exports = class Square extends Rectangle {
     super(size, size);
   }
 
+  double () {
+    super.double();
+  }
+
   charPrint (char = 'X') {
-    for (let i = 0; i < this.height; i++) {
-      console.log(char.repeat(this.width));
-    }
+    super.print(char);
   }
 };
