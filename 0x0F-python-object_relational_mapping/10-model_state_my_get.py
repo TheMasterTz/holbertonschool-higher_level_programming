@@ -22,4 +22,5 @@ if __name__ == "__main__":
         print("{:d}".format(states.id))
     else:
         print("Nothing")
+    session.commit()
     session.close()
