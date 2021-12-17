@@ -20,8 +20,8 @@ if __name__ == "__main__":
     cursor = MySQL.cursor()
     cursor.execute("""SELECT *
                     FROM states
-                    WHERE name = '{:s}'
-                    ORDER BY id ASC""".format(argv[4]))
+                    WHERE name = %s
+                    ORDER BY id ASC""", (argv[4], ))
     row = cursor.fetchall()
     for state in row:
         print(state)
