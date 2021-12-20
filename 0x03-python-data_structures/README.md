@@ -829,34 +829,3 @@ julien@CPython:~/CPython$
  Self-paced manual review  Panel footer - Controls 
 ×#### Recommended Sandboxes
 [Running only]() 
-### 2 images(2/5 Sandboxes spawned)
-### Ubuntu 14.04 - Python 3.4
-Ubuntu 14.04 with all tools needed and Python 3.4
-SSHSFTP[Webterm](https://intranet.hbtn.io/user_containers/17307/webterm) 
-[Stop]() 
-#### Credentials
-Host63ef0617c0ac.c0cd6e92.hbtn-cod.ioUsername63ef0617c0acPasswordc5e1d6929ee5c9d815ac#### Web access
-[HTTP](http://63ef0617c0ac.c0cd6e92.hbtn-cod.io/) 
-[3000](http://63ef0617c0ac.c0cd6e92.hbtn-cod.io:3000/) 
-[4000](http://63ef0617c0ac.c0cd6e92.hbtn-cod.io:4000/) 
-[5000](http://63ef0617c0ac.c0cd6e92.hbtn-cod.io:5000/) 
-[5001](http://63ef0617c0ac.c0cd6e92.hbtn-cod.io:5001/) 
-[8000](http://63ef0617c0ac.c0cd6e92.hbtn-cod.io:8000/) 
-[8080](http://63ef0617c0ac.c0cd6e92.hbtn-cod.io:8080/) 
-#### Port mapping
-SSH49924HTTP49923300049922400049921500049920500149919800049918808049917### Ubuntu 20.04
-Basic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Holberton Foundations
-SSHSFTP[Webterm](https://intranet.hbtn.io/user_containers/15739/webterm) 
-[Stop]() 
-#### Credentials
-Host8979f181df78.7399d2e2.hbtn-cod.ioUsername8979f181df78Password7409f49d648f5c07f670#### Web access
-[HTTPS](https://8979f181df78.7399d2e2.hbtn-cod.io/) 
-[HTTP](http://8979f181df78.7399d2e2.hbtn-cod.io/) 
-[3000](http://8979f181df78.7399d2e2.hbtn-cod.io:3000/) 
-[4000](http://8979f181df78.7399d2e2.hbtn-cod.io:4000/) 
-[5000](http://8979f181df78.7399d2e2.hbtn-cod.io:5000/) 
-[5001](http://8979f181df78.7399d2e2.hbtn-cod.io:5001/) 
-[8000](http://8979f181df78.7399d2e2.hbtn-cod.io:8000/) 
-[8080](http://8979f181df78.7399d2e2.hbtn-cod.io:8080/) 
-#### Port mapping
-SSH49620HTTP49619HTTPS49618300049617MySQL49616400049615500049614500149613800049612808049611
