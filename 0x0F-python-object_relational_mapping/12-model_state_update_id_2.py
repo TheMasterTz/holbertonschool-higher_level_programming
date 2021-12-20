@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+
 """
 python script that lists all states from the database hbtn_0e_0_usa
+
 """
 
 from model_state import Base, State
