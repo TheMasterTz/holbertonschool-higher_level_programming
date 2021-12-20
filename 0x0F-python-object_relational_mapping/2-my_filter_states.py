@@ -24,6 +24,7 @@ if __name__ == "__main__":
                     id ASC""".format(argv[4]))
     row = cursor.fetchall()
     for state in row:
-        print(state)
+        if state[1] == argv[4]:
+            print(state)
     cursor.close()
     MySQL.close
