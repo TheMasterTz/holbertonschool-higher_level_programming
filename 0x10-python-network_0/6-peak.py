@@ -1,15 +1,24 @@
 #!/usr/bin/python3
+"""
+find peak of list of unsorted numbers
+"""
 
-"""find peak of list of unsorted numbers"""
 
 def find_peak(list_of_integers):
-    li = list_of_integers
-    l = len(li)
-    if l == 0:
-        return
-    m = l // 2
-    if (m == l - 1 or li[m] >= li[m + 1]) and (m == 0 or li[m] >= li[m - 1]):
-        return li[m]
-    if m != l - 1 and li[m + 1] > li[m]:
-        return find_peak(li[m + 1:])
-    return find_peak(li[:m])
+    long = len(list_of_integers)
+
+    if not list_of_integers:
+        return None
+
+    for idx, i in enumerate(list_of_integers):
+
+        if long <= 6:
+            if idx == 0:
+                idx = 1
+            if i > list_of_integers[idx - 1] and i > list_of_integers[idx + 1]:
+                return i
+
+        if i > list_of_integers[idx - 1] and i > list_of_integers[idx + 1]:
+                return i
+
+    return list_of_integers[0]
