@@ -5,6 +5,15 @@ find peak of list of unsorted numbers
 
 
 def find_peak(list_of_integers):
+    """
+    find_peak list_of_integers
+
+    Args:
+        list_of_integers (list): [description]
+
+    Returns:
+        int: [description]
+    """
     long = len(list_of_integers)
 
     if not list_of_integers:
