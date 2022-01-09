@@ -7,19 +7,20 @@ from sys import argv
 import requests
 
 
-if __name__ == '__main__':
-    if len(argv[1]) == 0:
-        q = ""
-    else:
+if __name__ == "__main__":
+    if len(argv) > 1:
         q = argv[1]
+    else:
+        q = ''
 
-    data = {'q': q}
-    request = requests.post('http://0.0.0.0:5000/search_user', data)
     try:
-        json = request.json()
-        if len(json) == 0 or not json['id'] or not json['name']:
-            print("No result")
+        url = 'http://0.0.0.0:5000/search_user'
+        payload = {'q': q}
+        r = requests.post(url, payload).json()
+
+        if {'id', 'name'} <= r.keys():
+            print('[{}] {}'.format(r.get('id'), r.get('name')))
         else:
-            print("[{}] {}".format(json['id'], json['name']))
-    except:
-        print("Not a valid JSON")
+            print('No result')
+    except ValueError:
+        print('Not a valid JSON')
