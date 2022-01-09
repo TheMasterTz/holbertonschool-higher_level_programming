@@ -9,11 +9,11 @@ import requests
 
 if __name__ == '__main__':
     if len(argv[1]) == 0:
-        parameter = ""
+        q=""
     else:
-        parameter = argv[1]
+        q = argv[1]
 
-    data = {'q': parameter}
+    data = {'q': q}
     request = requests.post('http://0.0.0.0:5000/search_user', data)
     try:
         json = requests.json()
