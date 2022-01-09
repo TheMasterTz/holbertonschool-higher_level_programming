@@ -15,8 +15,8 @@ if __name__ == "__main__":
 
     try:
         url = 'http://0.0.0.0:5000/search_user'
-        payload = {'q': q}
-        r = requests.post(url, payload).json()
+        data = {'q': q}
+        r = requests.post(url, data).json()
 
         if len(r) == 0 or not r.get('id') or not r.get('name'):
             print('No result')
