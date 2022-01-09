@@ -10,5 +10,5 @@ import requests
 if __name__ == '__main__':
 
     auth = (argv[1], argv[2])
-    response = requests.get('https://api.github.com/user', data = auth).json()
+    response = requests.get('https://api.github.com/user', data=auth).json()
     print(response.get('id'))
