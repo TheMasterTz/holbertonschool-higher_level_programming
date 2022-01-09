@@ -2,11 +2,11 @@
 """
 fetches https://intranet.hbtn.io/status
 """
+from urllib import request
 
 if __name__ == '__main__':
-    import urllib.request as request
-
-    with request.urlopen('https://intranet.hbtn.io/status') as status:
+    req = request.Request('https://intranet.hbtn.io/status')
+    with request.urlopen(req) as status:
         html = status.read()
         print("Body response:")
         print("\t- type: {}".format(type(html)))
