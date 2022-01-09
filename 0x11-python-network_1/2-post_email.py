@@ -10,8 +10,8 @@ if __name__ == '__main__':
     import urllib.parse as parse
     from sys import argv
 
-    url = 'http://63ef0617c0ac.c0cd6e92.hbtn-cod.io:5000/'
-    value = {'email': '3507@holbertonschool.com'}
+    url = argv[1]
+    value = {'email': argv[2]}
 
     data = parse.urlencode(value)
     data = data.encode('utf-8')
