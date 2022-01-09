@@ -9,6 +9,7 @@ import requests
 
 if __name__ == '__main__':
 
-    auth = (argv[1], argv[2])
-    response = requests.get('https://api.github.com/user', data=auth).json()
-    print(response.get('id'))
+    url = "https://api.github.com/user"
+    r = requests.get(url, auth=(argv[1], argv[2]))
+    res = r.json()
+    print(res.get('id'))
