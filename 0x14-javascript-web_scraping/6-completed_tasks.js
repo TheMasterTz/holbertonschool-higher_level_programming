@@ -13,7 +13,7 @@ request(url, function (error, response, body) {
       const userId = json[i].userId;
       const completed = json[i].completed;
 
-      if (!tacksDisct[userId]) {
+      if (tacksDisct[userId] === undefined) {
         tacksDisct[userId] = 0;
       }
       if (completed) {
