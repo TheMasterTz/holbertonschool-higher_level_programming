@@ -16,7 +16,9 @@ request(url, function (error, response, body) {
       if (!tacksDisct[userId]) {
         tacksDisct[userId] = 0;
       }
-      if (completed) ++tacksDisct[userId];
+      if (completed) {
+        ++tacksDisct[userId];
+      }
     }
     console.log(tacksDisct);
   }
