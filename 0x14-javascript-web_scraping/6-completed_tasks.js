@@ -6,7 +6,7 @@ request(url, function (error, response, body) {
   if (error) {
     console.error(error);
   } else {
-    const tacksDisct = {}
+    const tacksDisct = {};
     const json = JSON.parse(body);
 
     for (let i = 0; i < json.length; i++) {
