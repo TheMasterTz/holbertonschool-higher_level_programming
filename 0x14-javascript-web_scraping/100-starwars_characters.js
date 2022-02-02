@@ -9,11 +9,11 @@ request(url, function (error, response, body) {
     const json = JSON.parse(body).characters;
 
     for (let i = 0; i < json.length; i++) {
-      request(json[i], function (error, response, body_json) {
+      request(json[i], function (error, response, bodyjson) {
         if (error) {
           console.error(error);
         }
-        console.log(JSON.parse(body_json).name)
+        console.log(JSON.parse(bodyjson).name);
       });
     }
   }
