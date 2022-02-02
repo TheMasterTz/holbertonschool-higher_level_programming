@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-const starWarsUri = 'https://swapi-api.hbtn.io/api/films';
+const starWarsUri = process.argv[2];
 let count = 0;
 
 request(starWarsUri, function (error, response, body) {
@@ -14,9 +14,9 @@ request(starWarsUri, function (error, response, body) {
 
       for (let j = 0; j < characters.length; j++) {
         const character = characters[j];
-        const characterId = character.split('/');
+        const characterId = character.split('/')[5];
 
-        if (characterId[5] == 18) {
+        if (characterId === '18') {
           count++;
         }
       }
