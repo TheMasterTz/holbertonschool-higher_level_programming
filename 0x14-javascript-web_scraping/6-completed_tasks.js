@@ -5,7 +5,7 @@ const url = process.argv[2];
 request(url, function (error, response, body) {
   if (error) {
     console.error(error);
-  } else if (response.statusCode === 200) {
+  } else {
     const tacksDisct = {}
     const json = JSON.parse(body);
 
